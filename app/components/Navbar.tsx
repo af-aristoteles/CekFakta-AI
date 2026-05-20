@@ -8,7 +8,7 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="bg-surface/40 backdrop-blur-xl border-b border-white/5 fixed top-0 left-0 w-full z-50 flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4">
+      <nav className="bg-surface/40 backdrop-blur-xl border-b border-white/5 fixed top-0 left-0 w-full z-[10000] flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4">
         <Link href="/" className="text-headline-md font-headline-md font-bold text-on-surface flex items-center gap-2">
           <svg className="w-7 h-7 text-cyan-400 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
             <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" className="stroke-cyan-500/30" />
@@ -40,7 +40,7 @@ export default function Navbar() {
 
       {/* Mobile Dropdown Menu */}
       <div 
-        className={`fixed top-[68px] left-0 w-full z-40 bg-surface/95 backdrop-blur-xl border-b border-white/5 transition-all duration-300 md:hidden overflow-hidden ${
+        className={`fixed top-[68px] left-0 w-full z-[9999] bg-surface/95 backdrop-blur-xl border-b border-white/5 transition-all duration-300 md:hidden overflow-hidden ${
           isOpen ? "max-h-[250px] opacity-100 py-6" : "max-h-0 opacity-0 py-0"
         }`}
       >
