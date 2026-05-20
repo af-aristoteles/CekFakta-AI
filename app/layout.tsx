@@ -42,7 +42,7 @@ export default function RootLayout({
             <div className="flex flex-col gap-2">
               <Link className="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors duration-200" href="/privacy">Kebijakan Privasi</Link>
               <Link className="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors duration-200" href="/terms">Syarat Layanan</Link>
-              <Link className="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors duration-200" href="/about">Tentang Kami</Link>
+              <Link className="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors duration-200" href="/tentang">Tentang Kami</Link>
             </div>
             <div className="flex flex-col gap-2">
               <a className="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors duration-200 flex items-center gap-2" href="mailto:alonmarlon089@gmail.com">

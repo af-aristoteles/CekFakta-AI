@@ -22,7 +22,7 @@ export default function Navbar() {
         {/* Desktop Navigation */}
         <div className="hidden md:flex gap-8 items-center">
           <Link className="text-on-surface-variant font-body-md hover:text-primary transition-colors duration-200" href="/">Beranda</Link>
-          <Link className="text-on-surface-variant font-body-md hover:text-primary transition-colors duration-200" href="/about">Tentang</Link>
+          <Link className="text-on-surface-variant font-body-md hover:text-primary transition-colors duration-200" href="/tentang">Tentang</Link>
         </div>
 
         <div className="hidden md:flex items-center">
@@ -55,7 +55,7 @@ export default function Navbar() {
           <Link 
             onClick={() => setIsOpen(false)}
             className="text-on-surface-variant font-body-lg text-lg hover:text-primary transition-colors w-full text-center py-2" 
-            href="/about"
+            href="/tentang"
           >
             Tentang
           </Link>
