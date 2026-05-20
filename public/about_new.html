@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Tentang Kami - CekFakta AI</title>
+<!-- Google Fonts & Material Symbols -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;600;700&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Config from Brand Anchors -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "secondary-container": "#00a572",
+                        "inverse-on-surface": "#2b303d",
+                        "on-secondary-fixed-variant": "#005236",
+                        "inverse-surface": "#dde2f3",
+                        "on-surface": "#dde2f3",
+                        "tertiary-container": "#ff938c",
+                        "outline": "#87929a",
+                        "inverse-primary": "#00668a",
+                        "secondary": "#4edea3",
+                        "primary": "#8ed5ff",
+                        "outline-variant": "#3e484f",
+                        "surface": "#0e131f",
+                        "on-surface-variant": "#bdc8d1",
+                        "tertiary-fixed": "#ffdad7",
+                        "on-error": "#690005",
+                        "surface-container-lowest": "#080e1a",
+                        "surface-variant": "#2f3542",
+                        "surface-container": "#1a202c",
+                        "primary-container": "#38bdf8",
+                        "on-primary-fixed-variant": "#004c69",
+                        "on-tertiary-fixed": "#410004",
+                        "secondary-fixed-dim": "#4edea3",
+                        "primary-fixed-dim": "#7bd0ff",
+                        "surface-container-highest": "#2f3542",
+                        "tertiary": "#ffbcb7",
+                        "on-tertiary": "#68000a",
+                        "on-tertiary-fixed-variant": "#930013",
+                        "surface-container-high": "#242a36",
+                        "surface-bright": "#343946",
+                        "on-primary-fixed": "#001e2c",
+                        "surface-tint": "#7bd0ff",
+                        "primary-fixed": "#c4e7ff",
+                        "on-primary": "#00354a",
+                        "on-tertiary-container": "#8d0012",
+                        "on-secondary-container": "#00311f",
+                        "on-secondary": "#003824",
+                        "tertiary-fixed-dim": "#ffb3ad",
+                        "surface-dim": "#0e131f",
+                        "on-background": "#dde2f3",
+                        "surface-container-low": "#161c28",
+                        "background": "#0e131f",
+                        "error-container": "#93000a",
+                        "on-secondary-fixed": "#002113",
+                        "error": "#ffb4ab",
+                        "on-error-container": "#ffdad6",
+                        "secondary-fixed": "#6ffbbe",
+                        "on-primary-container": "#004965"
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    spacing: {
+                        "margin-mobile": "16px",
+                        "unit": "4px",
+                        "margin-desktop": "40px",
+                        "container-max": "1280px",
+                        "gutter": "24px"
+                    },
+                    fontFamily: {
+                        "headline-lg": ["Geist"],
+                        "body-md": ["Geist"],
+                        "body-lg": ["Geist"],
+                        "display": ["Geist"],
+                        "headline-lg-mobile": ["Geist"],
+                        "label-sm": ["JetBrains Mono"],
+                        "headline-md": ["Geist"],
+                        "label-md": ["JetBrains Mono"]
+                    },
+                    fontSize: {
+                        "headline-lg": ["32px", { lineHeight: "1.2", letterSpacing: "-0.03em", fontWeight: "600" }],
+                        "body-md": ["16px", { lineHeight: "1.6", letterSpacing: "0", fontWeight: "400" }],
+                        "body-lg": ["18px", { lineHeight: "1.6", letterSpacing: "-0.01em", fontWeight: "400" }],
+                        "display": ["48px", { lineHeight: "1.1", letterSpacing: "-0.04em", fontWeight: "700" }],
+                        "headline-lg-mobile": ["24px", { lineHeight: "1.2", letterSpacing: "-0.02em", fontWeight: "600" }],
+                        "label-sm": ["12px", { lineHeight: "1.4", letterSpacing: "0.05em", fontWeight: "500" }],
+                        "headline-md": ["24px", { lineHeight: "1.3", letterSpacing: "-0.02em", fontWeight: "600" }],
+                        "label-md": ["14px", { lineHeight: "1.4", letterSpacing: "0.02em", fontWeight: "500" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style type="text/tailwindcss">
+        @layer utilities {
+            .material-symbols-outlined {
+                font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            }
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background antialiased selection:bg-primary/30 selection:text-primary-fixed">
+<!-- TopNavBar -->
+<nav class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 bg-surface/40 backdrop-blur-xl border-b border-white/5">
+<div class="text-headline-md font-headline-md font-bold text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">shield</span>
+            CekFakta AI
+        </div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-on-surface-variant font-body-md hover:text-primary transition-colors duration-200" href="#">Beranda</a>
+<a class="text-primary font-bold border-b-2 border-primary pb-1 scale-95 transition-transform" href="#">Tentang</a>
+<a class="text-on-surface-variant font-body-md hover:text-primary transition-colors duration-200" href="#">Tips</a>
+</div>
+<div class="hidden lg:block font-label-sm text-label-sm text-on-surface-variant px-3 py-1.5 rounded bg-surface-container/50 border border-white/5">
+            v1.0 - Live Grounding Engine
+        </div>
+<!-- Mobile Menu Trigger (Visual Only) -->
+<button class="md:hidden text-on-surface">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</nav>
+<!-- Main Content Canvas -->
+<main class="pt-32 pb-24 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<!-- Article Header -->
+<header class="max-w-3xl mx-auto mb-16 text-center">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary font-label-sm text-label-sm mb-6">
+<span class="material-symbols-outlined text-[14px]">flag</span>
+                Misi Kami
+            </div>
+<h1 class="font-display text-display text-on-surface mb-6">
+                Mengawal Integritas Informasi di Ekosistem Digital Indonesia.
+            </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+                CekFakta AI dibangun dari keresahan terhadap polarisasi dan misinformasi yang merajalela. Kami mengombinasikan kecerdasan buatan dengan disiplin jurnalistik untuk memberikan lapisan verifikasi yang instan, akurat, dan transparan bagi setiap warga digital.
+            </p>
+</header>
+<!-- Aesthetic Divider -->
+<div class="w-full h-px bg-gradient-to-r from-transparent via-white/10 to-transparent my-16"></div>
+<!-- Article Body -->
+<article class="max-w-3xl mx-auto space-y-8 text-on-surface font-body-md text-body-md leading-loose mb-24">
+<p>
+                Di era di mana data mengalir lebih cepat dari kemampuan manusia untuk memprosesnya, kebenaran sering kali terdistorsi oleh narasi algoritmis. Fragmentasi informasi ini tidak hanya membingungkan, tetapi juga mengancam fondasi pengambilan keputusan yang rasional di masyarakat.
+            </p>
+<p>
+                Kami percaya bahwa akses terhadap fakta yang diverifikasi bukanlah sebuah kemewahan, melainkan hak asasi digital. Oleh karena itu, CekFakta AI dikembangkan bukan sebagai arbiter mutlak, melainkan sebagai <strong class="text-primary font-semibold">instrumen augmentasi intelijen</strong>—sebuah alat bantu yang memperkuat kapasitas kritis pengguna dalam menavigasi lautan informasi.
+            </p>
+<h2 class="font-headline-lg text-headline-lg text-on-surface pt-8 pb-4 border-b border-white/5">
+                Filosofi "Dark Glass" Kami
+            </h2>
+<p>
+                Desain antarmuka dan arsitektur sistem kami mencerminkan komitmen terhadap objektivitas. Kami menolak noise visual dan manipulasi emosional. Lingkungan kerja CekFakta AI dirancang dengan estetika fungsional—presisi, tajam, dan transparan. Layaknya kaca gelap yang menyaring silau, sistem kami bertujuan memfilter sensasionalisme untuk mengungkap data struktural di baliknya.
+            </p>
+</article>
+<!-- Mission Pillars (Bento/Glass Cards) -->
+<section class="max-w-5xl mx-auto">
+<h3 class="font-label-md text-label-md text-primary tracking-widest uppercase mb-8 text-center">Pilar Fungsional</h3>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Card 1 -->
+<div class="bg-surface-container/40 backdrop-blur-xl border border-white/5 rounded-xl p-8 hover:bg-surface-container/60 transition-colors duration-300 flex flex-col items-start group">
+<div class="w-12 h-12 rounded bg-surface flex items-center justify-center border border-white/10 mb-6 group-hover:border-primary/50 transition-colors">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'wght' 300;">school</span>
+</div>
+<h4 class="font-headline-md text-headline-md text-on-surface mb-3">Literasi Analitis</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                        Meningkatkan pemahaman publik tentang struktur disinformasi melalui antarmuka yang membongkar anatomi klaim palsu, bukan sekadar memberikan label benar/salah.
+                    </p>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container/40 backdrop-blur-xl border border-white/5 rounded-xl p-8 hover:bg-surface-container/60 transition-colors duration-300 flex flex-col items-start group relative overflow-hidden">
+<!-- Top highlight simulation -->
+<div class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent"></div>
+<div class="w-12 h-12 rounded bg-surface flex items-center justify-center border border-white/10 mb-6 group-hover:border-primary/50 transition-colors">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'wght' 300;">bolt</span>
+</div>
+<h4 class="font-headline-md text-headline-md text-on-surface mb-3">Sintesis Instan</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                        Memanfaatkan Large Language Models yang di-grounding dengan basis data jurnalistik terpercaya untuk memberikan respons verifikasi dalam hitungan detik.
+                    </p>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-container/40 backdrop-blur-xl border border-white/5 rounded-xl p-8 hover:bg-surface-container/60 transition-colors duration-300 flex flex-col items-start group">
+<div class="w-12 h-12 rounded bg-surface flex items-center justify-center border border-white/10 mb-6 group-hover:border-primary/50 transition-colors">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'wght' 300;">account_tree</span>
+</div>
+<h4 class="font-headline-md text-headline-md text-on-surface mb-3">Jejak Data Terbuka</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                        Setiap kesimpulan verifikasi dilengkapi dengan sitasi referensi yang dapat dilacak secara independen, meminimalisir efek "black box" pada sistem AI.
+                    </p>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full px-margin-mobile md:px-margin-desktop py-12 grid grid-cols-1 md:grid-cols-3 gap-gutter bg-surface-container-lowest/60 border-t border-white/5">
+<div class="flex flex-col gap-4">
+<span class="text-label-md font-label-md font-bold text-on-surface">CekFakta AI</span>
+<span class="font-body-md text-body-md text-on-surface-variant">© 2024 CekFakta AI. Powered by Gemini AI. Abraham Fatbinan</span>
+</div>
+<div class="flex flex-col gap-2 font-body-md text-body-md">
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Privasi</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Syarat Layanan</a>
+<a class="text-primary hover:text-primary transition-colors duration-200" href="#">Tentang</a>
+</div>
+<div class="flex flex-col gap-2 font-label-sm text-label-sm">
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-200 flex items-center gap-2" href="mailto:alonmarlon089@gmail.com">
+<span class="material-symbols-outlined text-[16px]">mail</span>
+                alonmarlon089@gmail.com
+            </a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-200 flex items-center gap-2" href="tel:082335756519">
+<span class="material-symbols-outlined text-[16px]">call</span>
+                082335756519
+            </a>
+</div>
+</footer>
+</body></html>

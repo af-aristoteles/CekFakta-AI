@@ -1,0 +1,76 @@
+import type { Metadata } from "next";
+import { Inter, Geist, JetBrains_Mono } from "next/font/google";
+import Link from "next/link";
+import "./globals.css";
+
+const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
+const geist = Geist({ subsets: ["latin"], variable: "--font-geist" });
+const jetbrainsMono = JetBrains_Mono({ subsets: ["latin"], variable: "--font-jetbrains-mono" });
+
+export const metadata: Metadata = {
+  title: "CekFakta AI - Beranda",
+  description: "AI pendeteksi hoaks berbasis Gemini untuk membantu masyarakat Indonesia memahami informasi digital dengan lebih aman.",
+};
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  return (
+    <html lang="id" className="dark h-full antialiased">
+      <head>
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+      </head>
+      <body className={`${inter.variable} ${geist.variable} ${jetbrainsMono.variable} min-h-full flex flex-col bg-background selection:bg-primary-container selection:text-on-primary-container font-body-md text-body-md text-on-background`}>
+        {/* TopNavBar */}
+        <nav className="bg-surface/40 backdrop-blur-xl border-b border-white/5 fixed top-0 left-0 w-full z-50 flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4">
+          <Link href="/" className="text-headline-md font-headline-md font-bold text-on-surface flex items-center gap-2">
+            <span className="material-symbols-outlined" style={{ fontVariationSettings: "'FILL' 1" }}>shield</span>
+            CekFakta AI
+          </Link>
+          <div className="hidden md:flex gap-8 items-center">
+            <Link className="text-on-surface-variant font-body-md hover:text-primary transition-colors duration-200" href="/">Beranda</Link>
+            <Link className="text-on-surface-variant font-body-md hover:text-primary transition-colors duration-200" href="/about">Tentang</Link>
+          </div>
+          <div className="hidden md:flex items-center">
+            <span className="font-label-sm text-label-sm text-outline px-3 py-1 bg-surface-container rounded-DEFAULT border border-white/5">v1.0 - Live Grounding Engine</span>
+          </div>
+          {/* Mobile Menu Icon (Placeholder) */}
+          <button className="md:hidden text-on-surface">
+            <span className="material-symbols-outlined">menu</span>
+          </button>
+        </nav>
+
+        {children}
+
+        {/* Footer */}
+        <footer className="bg-surface-container-lowest/60 border-t border-white/5 w-full px-margin-mobile md:px-margin-desktop py-12 mt-auto">
+          <div className="max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-3 gap-gutter items-start">
+            <div className="flex flex-col gap-4">
+              <div className="text-label-md font-label-md font-bold text-on-surface">CekFakta AI</div>
+              <div className="font-body-md text-body-md text-on-surface-variant text-sm max-w-[250px]">
+                © 2026 CekFakta AI. Powered by Abraham Fatbinan.
+              </div>
+            </div>
+            <div className="flex flex-col gap-2">
+              <Link className="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors duration-200" href="/privacy">Kebijakan Privasi</Link>
+              <Link className="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors duration-200" href="/terms">Syarat Layanan</Link>
+              <Link className="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors duration-200" href="/about">Tentang Kami</Link>
+            </div>
+            <div className="flex flex-col gap-2">
+              <a className="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors duration-200 flex items-center gap-2" href="mailto:alonmarlon089@gmail.com">
+                <span className="material-symbols-outlined text-[16px]">mail</span>
+                alonmarlon089@gmail.com
+              </a>
+              <a className="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors duration-200 flex items-center gap-2" href="https://wa.me/6282335756519" target="_blank" rel="noopener noreferrer">
+                <span className="material-symbols-outlined text-[16px]">call</span>
+                WhatsApp Kami
+              </a>
+            </div>
+          </div>
+        </footer>
+      </body>
+    </html>
+  );
+}

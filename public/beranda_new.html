@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Beranda - CekFakta AI</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary-container": "#00a572",
+                        "inverse-on-surface": "#2b303d",
+                        "on-secondary-fixed-variant": "#005236",
+                        "inverse-surface": "#dde2f3",
+                        "on-surface": "#dde2f3",
+                        "tertiary-container": "#ff938c",
+                        "outline": "#87929a",
+                        "inverse-primary": "#00668a",
+                        "secondary": "#4edea3",
+                        "primary": "#8ed5ff",
+                        "outline-variant": "#3e484f",
+                        "surface": "#0e131f",
+                        "on-surface-variant": "#bdc8d1",
+                        "tertiary-fixed": "#ffdad7",
+                        "on-error": "#690005",
+                        "surface-container-lowest": "#080e1a",
+                        "surface-variant": "#2f3542",
+                        "surface-container": "#1a202c",
+                        "primary-container": "#38bdf8",
+                        "on-primary-fixed-variant": "#004c69",
+                        "on-tertiary-fixed": "#410004",
+                        "secondary-fixed-dim": "#4edea3",
+                        "primary-fixed-dim": "#7bd0ff",
+                        "surface-container-highest": "#2f3542",
+                        "tertiary": "#ffbcb7",
+                        "on-tertiary": "#68000a",
+                        "on-tertiary-fixed-variant": "#930013",
+                        "surface-container-high": "#242a36",
+                        "surface-bright": "#343946",
+                        "on-primary-fixed": "#001e2c",
+                        "surface-tint": "#7bd0ff",
+                        "primary-fixed": "#c4e7ff",
+                        "on-primary": "#00354a",
+                        "on-tertiary-container": "#8d0012",
+                        "on-secondary-container": "#00311f",
+                        "on-secondary": "#003824",
+                        "tertiary-fixed-dim": "#ffb3ad",
+                        "surface-dim": "#0e131f",
+                        "on-background": "#dde2f3",
+                        "surface-container-low": "#161c28",
+                        "background": "#0e131f",
+                        "error-container": "#93000a",
+                        "on-secondary-fixed": "#002113",
+                        "error": "#ffb4ab",
+                        "on-error-container": "#ffdad6",
+                        "secondary-fixed": "#6ffbbe",
+                        "on-primary-container": "#004965"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "margin-mobile": "16px",
+                        "unit": "4px",
+                        "margin-desktop": "40px",
+                        "container-max": "1280px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Geist", "sans-serif"],
+                        "body-md": ["Geist", "sans-serif"],
+                        "body-lg": ["Geist", "sans-serif"],
+                        "display": ["Geist", "sans-serif"],
+                        "headline-lg-mobile": ["Geist", "sans-serif"],
+                        "label-sm": ["JetBrains Mono", "monospace"],
+                        "headline-md": ["Geist", "sans-serif"],
+                        "label-md": ["JetBrains Mono", "monospace"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.03em", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "letterSpacing": "0", "fontWeight": "400"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "letterSpacing": "-0.01em", "fontWeight": "400"}],
+                        "display": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.04em", "fontWeight": "700"}],
+                        "headline-lg-mobile": ["24px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                        "label-sm": ["12px", {"lineHeight": "1.4", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                        "headline-md": ["24px", {"lineHeight": "1.3", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                        "label-md": ["14px", {"lineHeight": "1.4", "letterSpacing": "0.02em", "fontWeight": "500"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        /* Custom Geist Font Fallback just in case */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        .font-headline-lg, .font-body-md, .font-body-lg, .font-display, .font-headline-lg-mobile, .font-headline-md {
+            font-family: 'Geist', 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background min-h-screen flex flex-col font-body-md text-body-md antialiased selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar -->
+<nav class="bg-surface/40 backdrop-blur-xl border-b border-white/5 fixed top-0 left-0 w-full z-50 flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4">
+<div class="text-headline-md font-headline-md font-bold text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">shield</span>
+            CekFakta AI
+        </div>
+<div class="hidden md:flex gap-8 items-center">
+<a class="text-primary font-bold border-b-2 border-primary pb-1 font-body-md hover:text-primary transition-colors duration-200" href="#">Beranda</a>
+<a class="text-on-surface-variant font-body-md hover:text-primary transition-colors duration-200" href="#">Tentang</a>
+<a class="text-on-surface-variant font-body-md hover:text-primary transition-colors duration-200" href="#">Tips</a>
+</div>
+<div class="hidden md:flex items-center">
+<span class="font-label-sm text-label-sm text-outline px-3 py-1 bg-surface-container rounded-DEFAULT border border-white/5">v1.0 - Live Grounding Engine</span>
+</div>
+<!-- Mobile Menu Icon (Placeholder) -->
+<button class="md:hidden text-on-surface">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</nav>
+<!-- Main Content Canvas -->
+<main class="flex-grow pt-[88px] px-margin-mobile md:px-margin-desktop pb-20 w-full max-w-container-max mx-auto flex flex-col gap-16">
+<!-- Hero Split Section -->
+<section class="grid grid-cols-1 md:grid-cols-12 gap-gutter mt-12 items-center">
+<!-- Left Column: Copy -->
+<div class="md:col-span-5 flex flex-col gap-6">
+<h1 class="font-display text-display text-on-surface">
+                    Periksa Sebelum <br/>
+<span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">Percaya.</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-md">
+                    Analisis teks dan gambar dalam hitungan detik. Mesin AI kami memverifikasi klaim, mendeteksi manipulasi visual, dan memberikan konteks yang akurat untuk melawan disinformasi.
+                </p>
+<div class="flex items-center gap-4 mt-4">
+<div class="flex items-center gap-2 font-label-sm text-label-sm text-outline">
+<span class="material-symbols-outlined text-[16px]">verified_user</span>
+<span>Enkripsi E2E</span>
+</div>
+<div class="w-1 h-1 bg-outline-variant rounded-full"></div>
+<div class="flex items-center gap-2 font-label-sm text-label-sm text-outline">
+<span class="material-symbols-outlined text-[16px]">speed</span>
+<span>Analisis Real-time</span>
+</div>
+</div>
+</div>
+<!-- Right Column: Functional Glass Card -->
+<div class="md:col-span-7 bg-surface-container/40 backdrop-blur-md border border-white/5 rounded-xl p-6 relative overflow-hidden flex flex-col gap-6 shadow-[0_20px_40px_-15px_rgba(0,0,0,0.4)]">
+<!-- Inner subtle highlight -->
+<div class="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
+<!-- Text Input Area -->
+<div class="bg-black/20 border border-slate-800 rounded-lg focus-within:border-primary focus-within:ring-1 focus-within:ring-primary transition-all duration-200">
+<textarea class="w-full bg-transparent border-none text-on-surface font-body-md text-body-md placeholder:text-on-surface-variant/50 p-4 min-h-[120px] resize-none focus:ring-0" placeholder="Paste news text here..."></textarea>
+</div>
+<!-- Or Divider -->
+<div class="flex items-center gap-4">
+<div class="h-px bg-white/5 flex-grow"></div>
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">OR</span>
+<div class="h-px bg-white/5 flex-grow"></div>
+</div>
+<!-- Upload Area -->
+<div class="border border-dashed border-slate-700 hover:border-primary/50 bg-white/5 hover:bg-white/10 rounded-lg p-8 flex flex-col items-center justify-center gap-3 cursor-pointer transition-colors duration-200 group">
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors text-[32px]">document_scanner</span>
+<span class="font-label-md text-label-md text-on-surface-variant group-hover:text-on-surface transition-colors">Drag &amp; Drop Image or Screenshot</span>
+<span class="font-label-sm text-label-sm text-outline">Vision AI OCR enabled</span>
+</div>
+<!-- Action Button -->
+<button class="w-full bg-primary hover:bg-primary-fixed-dim text-on-primary font-headline-md text-[16px] py-4 rounded-lg flex items-center justify-center gap-2 transition-all duration-200 shadow-[inset_0_-2px_4px_rgba(0,0,0,0.2)]">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">analytics</span>
+                    Analyze with AI
+                </button>
+</div>
+</section>
+<!-- Results / Dashboard Grid (Placeholder for active state) -->
+<section class="grid grid-cols-1 md:grid-cols-12 gap-gutter mt-8">
+<div class="col-span-full mb-4 flex items-center gap-3">
+<div class="h-4 w-1 bg-primary rounded-full"></div>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface">Recent Analysis</h2>
+</div>
+<!-- Trust Score Card -->
+<div class="md:col-span-4 bg-surface-container/30 border border-white/5 rounded-xl p-6 flex flex-col items-center justify-center gap-6">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider self-start w-full text-center">Trust Score</span>
+<!-- Circular Chart Placeholder -->
+<div class="relative w-32 h-32 flex items-center justify-center">
+<svg class="w-full h-full -rotate-90" viewbox="0 0 36 36">
+<path class="text-surface-variant" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-width="2"></path>
+<path class="text-secondary" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-dasharray="85, 100" stroke-linecap="round" stroke-width="2"></path>
+</svg>
+<div class="absolute flex flex-col items-center">
+<span class="font-display text-display text-on-surface text-[32px]">85%</span>
+</div>
+</div>
+<div class="font-label-sm text-label-sm text-secondary bg-secondary/10 border border-secondary/20 px-3 py-1 rounded-full">
+                    Aman / Terverifikasi
+                </div>
+</div>
+<!-- Data Grid Card -->
+<div class="md:col-span-8 bg-surface-container/30 border border-white/5 rounded-xl p-6 flex flex-col gap-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<!-- Indikator Kejanggalan -->
+<div class="flex flex-col gap-4">
+<div class="flex items-center gap-2 border-b border-white/5 pb-2">
+<span class="material-symbols-outlined text-outline text-[18px]">warning</span>
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Indikator Kejanggalan</span>
+</div>
+<ul class="flex flex-col gap-3">
+<li class="flex items-start gap-3">
+<div class="mt-1 w-2 h-2 rounded-full bg-error shrink-0"></div>
+<span class="font-body-md text-body-md text-on-surface-variant text-sm">Gaya bahasa emosional dan provokatif terdeteksi.</span>
+</li>
+<li class="flex items-start gap-3">
+<div class="mt-1 w-2 h-2 rounded-full bg-secondary shrink-0"></div>
+<span class="font-body-md text-body-md text-on-surface-variant text-sm">Sumber referensi tautan silang konsisten dengan media arus utama.</span>
+</li>
+</ul>
+</div>
+<!-- Edukasi Digital -->
+<div class="flex flex-col gap-4">
+<div class="flex items-center gap-2 border-b border-white/5 pb-2">
+<span class="material-symbols-outlined text-outline text-[18px]">school</span>
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Edukasi Digital</span>
+</div>
+<div class="bg-black/20 border border-slate-800 rounded-lg p-4">
+<p class="font-body-md text-body-md text-on-surface-variant text-sm">
+                                "Berita yang sah biasanya mencantumkan nama penulis dan tanggal publikasi yang jelas. Selalu periksa silang dengan portal berita resmi lainnya."
+                            </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest/60 border-t border-white/5 w-full px-margin-mobile md:px-margin-desktop py-12 mt-auto">
+<div class="max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-3 gap-gutter items-start">
+<div class="flex flex-col gap-4">
+<div class="text-label-md font-label-md font-bold text-on-surface">CekFakta AI</div>
+<div class="font-body-md text-body-md text-on-surface-variant text-sm max-w-[250px]">
+                    © 2024 CekFakta AI. Powered by Gemini AI. Abraham Fatbinan
+                </div>
+</div>
+<div class="flex flex-col gap-2">
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Privasi</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Syarat Layanan</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Tentang</a>
+</div>
+<div class="flex flex-col gap-2">
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors duration-200 flex items-center gap-2" href="mailto:alonmarlon089@gmail.com">
+<span class="material-symbols-outlined text-[16px]">mail</span>
+                    alonmarlon089@gmail.com
+                </a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors duration-200 flex items-center gap-2" href="tel:082335756519">
+<span class="material-symbols-outlined text-[16px]">call</span>
+                    082335756519
+                </a>
+</div>
+</div>
+</footer>
+</body></html>

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Syarat Layanan - CekFakta AI</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Configuration -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary-container": "#00a572",
+                        "inverse-on-surface": "#2b303d",
+                        "on-secondary-fixed-variant": "#005236",
+                        "inverse-surface": "#dde2f3",
+                        "on-surface": "#dde2f3",
+                        "tertiary-container": "#ff938c",
+                        "outline": "#87929a",
+                        "inverse-primary": "#00668a",
+                        "secondary": "#4edea3",
+                        "primary": "#8ed5ff",
+                        "outline-variant": "#3e484f",
+                        "surface": "#0e131f",
+                        "on-surface-variant": "#bdc8d1",
+                        "tertiary-fixed": "#ffdad7",
+                        "on-error": "#690005",
+                        "surface-container-lowest": "#080e1a",
+                        "surface-variant": "#2f3542",
+                        "surface-container": "#1a202c",
+                        "primary-container": "#38bdf8",
+                        "on-primary-fixed-variant": "#004c69",
+                        "on-tertiary-fixed": "#410004",
+                        "secondary-fixed-dim": "#4edea3",
+                        "primary-fixed-dim": "#7bd0ff",
+                        "surface-container-highest": "#2f3542",
+                        "tertiary": "#ffbcb7",
+                        "on-tertiary": "#68000a",
+                        "on-tertiary-fixed-variant": "#930013",
+                        "surface-container-high": "#242a36",
+                        "surface-bright": "#343946",
+                        "on-primary-fixed": "#001e2c",
+                        "surface-tint": "#7bd0ff",
+                        "primary-fixed": "#c4e7ff",
+                        "on-primary": "#00354a",
+                        "on-tertiary-container": "#8d0012",
+                        "on-secondary-container": "#00311f",
+                        "on-secondary": "#003824",
+                        "tertiary-fixed-dim": "#ffb3ad",
+                        "surface-dim": "#0e131f",
+                        "on-background": "#dde2f3",
+                        "surface-container-low": "#161c28",
+                        "background": "#0e131f",
+                        "error-container": "#93000a",
+                        "on-secondary-fixed": "#002113",
+                        "error": "#ffb4ab",
+                        "on-error-container": "#ffdad6",
+                        "secondary-fixed": "#6ffbbe",
+                        "on-primary-container": "#004965"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "margin-mobile": "16px",
+                        "unit": "4px",
+                        "margin-desktop": "40px",
+                        "container-max": "1280px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Geist"],
+                        "body-md": ["Geist"],
+                        "body-lg": ["Geist"],
+                        "display": ["Geist"],
+                        "headline-lg-mobile": ["Geist"],
+                        "label-sm": ["JetBrains Mono"],
+                        "headline-md": ["Geist"],
+                        "label-md": ["JetBrains Mono"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.03em", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "letterSpacing": "0", "fontWeight": "400"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "letterSpacing": "-0.01em", "fontWeight": "400"}],
+                        "display": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.04em", "fontWeight": "700"}],
+                        "headline-lg-mobile": ["24px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                        "label-sm": ["12px", {"lineHeight": "1.4", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                        "headline-md": ["24px", {"lineHeight": "1.3", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                        "label-md": ["14px", {"lineHeight": "1.4", "letterSpacing": "0.02em", "fontWeight": "500"}]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-background text-on-background min-h-screen font-body-md flex flex-col pt-[80px]">
+<!-- TopNavBar -->
+<nav class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 bg-surface/40 backdrop-blur-xl border-b border-white/5">
+<div class="flex items-center gap-8">
+<a class="text-headline-md font-headline-md font-bold text-on-surface flex items-center gap-2" href="#">
+<span class="material-symbols-outlined text-primary" data-icon="policy" style="font-variation-settings: 'FILL' 1;">policy</span>
+                CekFakta AI
+            </a>
+<div class="hidden md:flex items-center gap-6">
+<a class="text-on-surface-variant font-body-md hover:text-primary transition-colors duration-200" href="#">Beranda</a>
+<a class="text-on-surface-variant font-body-md hover:text-primary transition-colors duration-200" href="#">Tentang</a>
+<a class="text-on-surface-variant font-body-md hover:text-primary transition-colors duration-200" href="#">Tips</a>
+</div>
+</div>
+<div class="hidden md:flex items-center">
+<span class="font-label-sm text-label-sm text-primary px-3 py-1 rounded border border-primary/20 bg-primary/5">
+                v1.0 - Live Grounding Engine
+            </span>
+</div>
+</nav>
+<!-- Main Content: Article Layout -->
+<main class="flex-grow w-full max-w-3xl mx-auto px-margin-mobile md:px-0 py-16">
+<!-- Header -->
+<header class="mb-16">
+<div class="flex items-center gap-2 mb-4">
+<span class="font-label-sm text-label-sm text-primary tracking-widest uppercase">Dokumen Legal</span>
+<span class="w-8 h-px bg-white/10"></span>
+<span class="font-label-sm text-label-sm text-outline">Pembaruan Terakhir: 15 Oktober 2024</span>
+</div>
+<h1 class="font-display text-display text-on-surface mb-6">Syarat Layanan</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+                Selamat datang di CekFakta AI. Dokumen ini menguraikan aturan, tanggung jawab, dan batasan penggunaan mesin verifikasi informasi kami yang ditenagai oleh kecerdasan buatan. Harap baca dengan saksama.
+            </p>
+</header>
+<!-- Article Sections -->
+<article class="space-y-12 text-on-surface-variant">
+<section>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-4">1. Penerimaan Syarat</h2>
+<p class="mb-4">
+                    Dengan mengakses atau menggunakan platform CekFakta AI, Anda menyetujui untuk terikat oleh Syarat Layanan ini. Jika Anda tidak menyetujui seluruh syarat dan ketentuan, Anda tidak diizinkan untuk menggunakan layanan kami.
+                </p>
+<p>
+                    Layanan ini ditujukan untuk digunakan oleh individu yang mencari alat bantu verifikasi informasi independen untuk tujuan riset, jurnalistik, atau penggunaan pribadi yang sah.
+                </p>
+</section>
+<section>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-4">2. Aturan Penggunaan</h2>
+<p class="mb-4">
+                    Sebagai pengguna, Anda setuju untuk tidak menggunakan CekFakta AI untuk:
+                </p>
+<ul class="list-disc list-inside space-y-2 mb-4 ml-4">
+<li>Menghasilkan atau mendistribusikan disinformasi, ujaran kebencian, atau konten ilegal.</li>
+<li>Melakukan rekayasa balik (reverse engineering) pada model AI atau sistem pencarian kami.</li>
+<li>Mengotomatisasi permintaan (scraping/botting) tanpa izin tertulis dari pihak CekFakta AI.</li>
+<li>Menggunakan hasil verifikasi sebagai alat bukti hukum final tanpa validasi ahli manusia.</li>
+</ul>
+</section>
+<!-- Highlight/Glassmorphism Warning Box -->
+<section class="p-6 bg-surface-container border border-error/20 rounded-lg relative overflow-hidden">
+<div class="absolute top-0 left-0 w-1 h-full bg-error"></div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-error mt-1" data-icon="warning">warning</span>
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-2">3. Batasan AI (Penting)</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                            CekFakta AI menggunakan model bahasa besar (LLM) untuk memproses dan menyintesis informasi. Meskipun kami menerapkan <em>Live Grounding Engine</em> untuk meningkatkan akurasi, <strong>sistem ini dapat mengalami halusinasi atau menghasilkan data yang tidak akurat</strong>. Platform ini adalah alat bantu, bukan pengganti penilaian kritis manusia. Pengguna bertanggung jawab penuh atas keputusan yang diambil berdasarkan output dari layanan ini.
+                        </p>
+</div>
+</div>
+</section>
+<section>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-4">4. Tanggung Jawab Pengguna</h2>
+<p class="mb-4">
+                    Anda bertanggung jawab menjaga kerahasiaan kredensial akses Anda dan atas semua aktivitas yang terjadi di bawah akun Anda. Anda wajib memverifikasi ulang setiap klaim kritis yang dihasilkan oleh sistem kami dengan sumber primer.
+                </p>
+</section>
+<section>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-4">5. Perubahan Layanan</h2>
+<p>
+                    Kami berhak untuk memodifikasi, menangguhkan, atau menghentikan layanan (atau bagian mana pun darinya) kapan saja dengan atau tanpa pemberitahuan. Kami juga dapat memperbarui Syarat Layanan ini dari waktu ke waktu. Penggunaan berkelanjutan Anda atas layanan setelah perubahan tersebut merupakan bentuk persetujuan Anda terhadap syarat yang baru.
+                </p>
+</section>
+</article>
+</main>
+<!-- Footer -->
+<footer class="w-full px-margin-mobile md:px-margin-desktop py-12 bg-surface-container-lowest/60 border-t border-white/5 mt-auto">
+<div class="max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-3 gap-gutter items-center">
+<div class="flex flex-col gap-2">
+<span class="text-label-md font-label-md font-bold text-on-surface">CekFakta AI</span>
+<span class="font-body-md text-body-md text-on-surface-variant">
+                    © 2024 CekFakta AI. Powered by Gemini AI. Abraham Fatbinan
+                </span>
+</div>
+<div class="flex flex-wrap gap-4 md:justify-center">
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Privasi</a>
+<a class="font-body-md text-body-md text-primary hover:text-primary transition-colors duration-200" href="#">Syarat Layanan</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Tentang</a>
+</div>
+<div class="flex flex-col gap-1 md:items-end">
+<a class="font-label-sm text-label-sm text-outline hover:text-primary transition-colors duration-200" href="mailto:alonmarlon089@gmail.com">alonmarlon089@gmail.com</a>
+<a class="font-label-sm text-label-sm text-outline hover:text-primary transition-colors duration-200" href="tel:082335756519">082335756519</a>
+</div>
+</div>
+</footer>
+</body></html>
