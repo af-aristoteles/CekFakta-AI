@@ -99,8 +99,11 @@ ${text || "Gambar terlampir."}`;
       });
     }
 
+    const currentDate = new Date().toLocaleDateString('id-ID', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
+    const dynamicSystemInstruction = `${systemInstructionText}\n\nPENTING: Hari ini adalah ${currentDate}. Tahun berjalan saat ini adalah tahun nyata di masa sekarang. Segala informasi atau dokumen yang mencantumkan tanggal di sekitar waktu ini adalah logis dan sedang berlangsung. Sesuaikan analisis konteks waktumu secara akurat berdasarkan tanggal hari ini.`;
+
     const payload = {
-      systemInstruction: { parts: [{ text: systemInstructionText }] },
+      systemInstruction: { parts: [{ text: dynamicSystemInstruction }] },
       contents: [{ parts }],
       generationConfig: {
         temperature: 0.2,
