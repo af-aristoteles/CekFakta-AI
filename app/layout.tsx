@@ -3,6 +3,8 @@ import { Inter, Geist, JetBrains_Mono } from "next/font/google";
 import Link from "next/link";
 import "./globals.css";
 
+import Navbar from "./components/Navbar";
+
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const geist = Geist({ subsets: ["latin"], variable: "--font-geist" });
 const jetbrainsMono = JetBrains_Mono({ subsets: ["latin"], variable: "--font-jetbrains-mono" });
@@ -24,28 +26,7 @@ export default function RootLayout({
       </head>
       <body className={`${inter.variable} ${geist.variable} ${jetbrainsMono.variable} min-h-full flex flex-col bg-background selection:bg-primary-container selection:text-on-primary-container font-body-md text-body-md text-on-background`}>
         {/* TopNavBar */}
-        <nav className="bg-surface/40 backdrop-blur-xl border-b border-white/5 fixed top-0 left-0 w-full z-50 flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4">
-          <Link href="/" className="text-headline-md font-headline-md font-bold text-on-surface flex items-center gap-2">
-            <svg className="w-7 h-7 text-cyan-400 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" className="stroke-cyan-500/30" />
-              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-              <circle cx="12" cy="11" r="3" />
-              <path d="m9 11 2 2 4-4" className="stroke-cyan-400" />
-            </svg>
-            CekFakta AI
-          </Link>
-          <div className="hidden md:flex gap-8 items-center">
-            <Link className="text-on-surface-variant font-body-md hover:text-primary transition-colors duration-200" href="/">Beranda</Link>
-            <Link className="text-on-surface-variant font-body-md hover:text-primary transition-colors duration-200" href="/about">Tentang</Link>
-          </div>
-          <div className="hidden md:flex items-center">
-            <span className="font-label-sm text-label-sm text-outline px-3 py-1 bg-surface-container rounded-DEFAULT border border-white/5">v1.0 - Live Grounding Engine</span>
-          </div>
-          {/* Mobile Menu Icon (Placeholder) */}
-          <button className="md:hidden text-on-surface">
-            <span className="material-symbols-outlined">menu</span>
-          </button>
-        </nav>
+        <Navbar />
 
         {children}
 

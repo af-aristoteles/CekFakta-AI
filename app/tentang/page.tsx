@@ -4,31 +4,7 @@ import Image from "next/image";
 export default function TentangKami() {
   return (
     <div className="bg-background text-on-background font-body-md selection:bg-primary-container selection:text-on-primary-container circuit-bg min-h-screen">
-      {/* TopNavBar */}
-      <nav className="fixed top-0 w-full flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 max-w-container-max-width mx-auto left-0 right-0 bg-surface/80 backdrop-blur-lg border-b border-white/10 z-50 shadow-[0_0_20px_rgba(0,240,255,0.15)]">
-        <div className="flex items-center gap-2">
-          <svg className="w-7 h-7 text-cyan-400 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" className="stroke-cyan-500/30" />
-            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-            <circle cx="12" cy="11" r="3" />
-            <path d="m9 11 2 2 4-4" className="stroke-cyan-400" />
-          </svg>
-          <span className="text-headline-md font-bold text-primary tracking-tight">CekFakta AI</span>
-        </div>
-        <div className="hidden md:flex gap-8 items-center">
-          <Link href="/" className="text-on-surface-variant font-body-md hover:text-primary transition-colors duration-300">Beranda</Link>
-          <Link href="/tentang" className="text-primary font-bold border-b-2 border-primary pb-1 transition-colors duration-300">Tentang</Link>
-          <Link href="/">
-            <button className="bg-primary-container text-on-primary-container px-6 py-2 rounded-lg font-label-md hover:scale-95 transition-all duration-150 ease-in-out glow-cyan">
-              Mulai Analisis
-            </button>
-          </Link>
-        </div>
-        {/* Mobile Toggle (Simplified for UI only) */}
-        <div className="md:hidden">
-          <span className="material-symbols-outlined text-primary">menu</span>
-        </div>
-      </nav>
+      {/* Inherits global Navbar from RootLayout */}
 
       <main className="pt-32 pb-20 px-margin-mobile md:px-margin-desktop max-w-container-max-width mx-auto">
         {/* Hero Section: Bento Inspired */}
