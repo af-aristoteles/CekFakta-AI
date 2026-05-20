@@ -26,7 +26,12 @@ export default function RootLayout({
         {/* TopNavBar */}
         <nav className="bg-surface/40 backdrop-blur-xl border-b border-white/5 fixed top-0 left-0 w-full z-50 flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4">
           <Link href="/" className="text-headline-md font-headline-md font-bold text-on-surface flex items-center gap-2">
-            <span className="material-symbols-outlined" style={{ fontVariationSettings: "'FILL' 1" }}>shield</span>
+            <svg className="w-7 h-7 text-cyan-400 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" className="stroke-cyan-500/30" />
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+              <circle cx="12" cy="11" r="3" />
+              <path d="m9 11 2 2 4-4" className="stroke-cyan-400" />
+            </svg>
             CekFakta AI
           </Link>
           <div className="hidden md:flex gap-8 items-center">
