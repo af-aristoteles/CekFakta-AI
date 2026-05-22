@@ -12,6 +12,9 @@ const jetbrainsMono = JetBrains_Mono({ subsets: ["latin"], variable: "--font-jet
 export const metadata: Metadata = {
   title: "CekFakta AI - Beranda",
   description: "AI pendeteksi hoaks berbasis Gemini untuk membantu masyarakat Indonesia memahami informasi digital dengan lebih aman.",
+  verification: {
+    google: "GwlJm4e3-HxCEL_6m6vfHtwM4_2lech-ufez2g1FYd8",
+  },
 };
 
 export default function RootLayout({
