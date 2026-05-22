@@ -23,6 +23,7 @@ export default function RootLayout({
     <html lang="id" className="dark h-full antialiased">
       <head>
         <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+        <meta name="google-site-verification" content="GwlJm4e3-HxCEL_6m6vfHtwM4_2lech-ufez2g1FYd8" />
       </head>
       <body className={`${inter.variable} ${geist.variable} ${jetbrainsMono.variable} min-h-full flex flex-col bg-background selection:bg-primary-container selection:text-on-primary-container font-body-md text-body-md text-on-background`}>
         {/* TopNavBar */}
